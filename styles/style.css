@@ -240,15 +240,15 @@
   }
 
   .section {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .cards {
-    grid-column: span 2;
+    grid-template-columns: 1fr 2fr;
   }
 
   .content__what .cards {
     grid-column: 1/-1;
+  }
+
+  .content__pictures {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .content__pictures-title {
@@ -281,6 +281,18 @@
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+
+  .section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards {
+    grid-column: span 2;
+  }
+
+  .content__what .cards {
+    grid-column: 1/-1;
   }
 
   .content__what .cards {
