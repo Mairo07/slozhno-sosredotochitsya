@@ -292,10 +292,7 @@
   }
 
   .content__what .cards {
-    grid-column: 1/-1;
-  }
-
-  .content__what .cards {
     grid-template-columns: repeat(3, 1fr);
+    grid-column: 1/-1;
   }
 }
