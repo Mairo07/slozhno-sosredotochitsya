@@ -1,15 +1,32 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/*
+
+░░░░░░█░█ █▀█ █▀█ █▀█ █░█░░░░░
+░░░░░░█▀█ █▀█ █▀▀ █▀▀ ▀█▀░░░░░
+░░░░░░▀░▀ ▀░▀ ▀░░ ▀░░ ░▀░░░░░░
+█▄░█ █▀▀ █░█░█░░█░█ █▀▀ █▀█ █▀█
+█░██ █▀▀ █░█░█░░▀█▀ █▀▀ █▀█ ██▀
+▀░░▀ ▀▀▀ ░▀▀▀░░░░▀░ ▀▀▀ ▀░▀ ▀░▀
+
+С наступающим! Всего самого классного в новом году!
+
+*/
+
+
 .page {
   color: var(--accent-color, #ff0070);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: var(--text-family), sans-serif;
   font-size: 18px;
-  background-color: var(--bg-color, #000028);
+
+  /* background-color: var(--bg-color, #000028);
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+
+  background: var(--bg-color, #000028) var(--bg-image) center / cover fixed;
   inline-size: 100%;
 }
 
@@ -84,7 +101,7 @@
 
 .header__theme-menu-button {
   border: none;
-  padding: 0 13px;
+  padding: 3.15px 0;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -93,7 +110,6 @@
   background-color: transparent;
   cursor: pointer;
   inline-size: 70px;
-  block-size: 26px;
 }
 
 /* состояния кнопок переключения тем */
@@ -160,7 +176,7 @@
   line-height: 130%;
 }
 
-.cards {
+.cards-list {
   display: grid;
   gap: var(--section-gap, 20px);
 }
@@ -193,7 +209,11 @@
   line-height: 1;
 }
 
-.content__how .cards .card-title {
+.cards-list-title {
+  margin-block-end: var(--section-gap, 20px);
+}
+
+.content__how_card-title {
   font-weight: 400;
 }
 
@@ -227,14 +247,6 @@
 }
 
 @media (width >= 768px) {
-  :root {
-    --page-common-padding: 20px;
-    --content-margin: 60px;
-    --sections-margin: 80px;
-    --content-pictures-gap: 20px;
-    --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
   .header__title {
     margin-inline-start: -20px;
   }
@@ -243,7 +255,7 @@
     grid-template-columns: 1fr 2fr;
   }
 
-  .content__what .cards {
+  .content__what .cards-list {
     grid-column: 1/-1;
   }
 
@@ -287,11 +299,15 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .cards {
+  .cards-list {
     grid-column: span 2;
   }
 
-  .content__what .cards {
+  .content__how-cards-list-container {
+    grid-column: span 2;
+  }
+
+  .content__what .cards-list {
     grid-template-columns: repeat(3, 1fr);
     grid-column: 1/-1;
   }
